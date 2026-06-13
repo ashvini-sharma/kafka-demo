@@ -159,15 +159,15 @@ pipeline {
             }
         }
         */
+    }
 
-        post {
-            success {
-                echo 'Build completed and JAR uploaded.'
-            }
+    post {
+        success {
+            echo 'Build completed and JAR uploaded.'
+        }
 
-            failure {
-                echo 'Pipeline failed.'
-            }
+        failure {
+            echo 'Pipeline failed.'
         }
     }
 }
