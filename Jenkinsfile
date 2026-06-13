@@ -77,8 +77,8 @@ pipeline {
         stage('Upload Image to ECR') {
             steps {
                  script {
-                    ORDER_IMAGE_URI=${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${ECR_REPO}:order-app-${BUILD_ID}
-                    PAYMENT_IMAGE_URI=${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${ECR_REPO}:payment-app-${BUILD_ID}
+                    env.ORDER_IMAGE_URI="${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${ECR_REPO}:order-app-${BUILD_ID}"
+                    env.PAYMENT_IMAGE_URI="${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${ECR_REPO}:payment-app-${BUILD_ID}"
                     echo "ORDER_IMAGE_URI=${env.ORDER_IMAGE_URI}"
                     echo "PAYMENT_IMAGE_URI=${env.PAYMENT_IMAGE_URI}"
                 }
