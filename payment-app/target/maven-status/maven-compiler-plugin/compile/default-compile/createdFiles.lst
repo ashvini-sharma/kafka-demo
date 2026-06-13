@@ -1,7 +1,0 @@
-com/example/paymentapp/dto/OrderEvent.class
-com/example/paymentapp/service/PaymentProducer.class
-com/example/paymentapp/consumer/OrderConsumer.class
-com/example/paymentapp/config/KafkaConsumerConfig.class
-com/example/paymentapp/PaymentAppApplication.class
-com/example/paymentapp/dto/PaymentEvent.class
-com/example/paymentapp/config/KafkaProducerConfig.class
