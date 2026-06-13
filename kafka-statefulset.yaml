@@ -1,0 +1,61 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: kafka
+spec:
+  serviceName: kafka
+  replicas: 3
+  selector:
+    matchLabels:
+      app: kafka
+  template:
+    metadata:
+      labels:
+        app: kafka
+    spec:
+      containers:
+        - name: kafka
+          image: apache/kafka:4.0.0
+          command:
+            - /bin/bash
+            - -c
+            - |
+              ORDINAL=${HOSTNAME##*-}
+              export KAFKA_NODE_ID=$((ORDINAL+1))
+
+              export KAFKA_PROCESS_ROLES=broker,controller
+              export KAFKA_CONTROLLER_LISTENER_NAMES=CONTROLLER
+              export KAFKA_LISTENERS=PLAINTEXT://:9092,CONTROLLER://:9093
+              export KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://${HOSTNAME}.kafka:9092
+              export KAFKA_LISTENER_SECURITY_PROTOCOL_MAP=PLAINTEXT:PLAINTEXT,CONTROLLER:PLAINTEXT
+              export KAFKA_CONTROLLER_QUORUM_VOTERS=1@kafka-0.kafka:9093,2@kafka-1.kafka:9093,3@kafka-2.kafka:9093
+              export CLUSTER_ID=$(cat /etc/kafka-config/CLUSTER_ID)
+
+              exec /etc/kafka/docker/run
+          ports:
+            - containerPort: 9092
+            - containerPort: 9093
+          volumeMounts:
+            - name: data
+              mountPath: /var/lib/kafka/data
+            - name: kafka-config
+              mountPath: /etc/kafka-config
+          readinessProbe:
+            tcpSocket:
+              port: 9092
+          livenessProbe:
+            tcpSocket:
+              port: 9092
+      volumes:
+        - name: kafka-config
+          configMap:
+            name: kafka-config
+  volumeClaimTemplates:
+    - metadata:
+        name: data
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 2Gi

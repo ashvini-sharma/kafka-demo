@@ -1,0 +1,5 @@
+/Volumes/SoftwareHive/WORK/STSWorkspace/order-app/src/main/java/com/example/orderapp/OrderappApplication.java
+/Volumes/SoftwareHive/WORK/STSWorkspace/order-app/src/main/java/com/example/orderapp/config/KafkaProducerConfig.java
+/Volumes/SoftwareHive/WORK/STSWorkspace/order-app/src/main/java/com/example/orderapp/controller/OrderController.java
+/Volumes/SoftwareHive/WORK/STSWorkspace/order-app/src/main/java/com/example/orderapp/dto/OrderEvent.java
+/Volumes/SoftwareHive/WORK/STSWorkspace/order-app/src/main/java/com/example/orderapp/service/OrderProducer.java

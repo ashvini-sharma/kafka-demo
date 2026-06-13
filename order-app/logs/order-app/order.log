@@ -1,0 +1,32 @@
+2026-06-13 19:12:57 INFO  c.e.o.OrderappApplicationTests - Starting OrderappApplicationTests using Java 25.0.2 with PID 4524 (started by ashvini in /Volumes/SoftwareHive/WORK/STSWorkspace/order-app)
+2026-06-13 19:12:57 DEBUG c.e.o.OrderappApplicationTests - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-13 19:12:57 INFO  c.e.o.OrderappApplicationTests - No active profile set, falling back to 1 default profile: "local"
+2026-06-13 19:12:57 INFO  c.e.o.OrderappApplicationTests - Started OrderappApplicationTests in 0.456 seconds (process running for 0.827)
+2026-06-13 19:13:09 INFO  c.e.orderapp.OrderappApplication - Starting OrderappApplication using Java 25.0.2 with PID 4531 (/Volumes/SoftwareHive/WORK/STSWorkspace/order-app/target/classes started by ashvini in /Volumes/SoftwareHive/WORK/STSWorkspace/order-app)
+2026-06-13 19:13:09 DEBUG c.e.orderapp.OrderappApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-13 19:13:09 INFO  c.e.orderapp.OrderappApplication - No active profile set, falling back to 1 default profile: "local"
+2026-06-13 19:13:09 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-06-13 19:13:09 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-13 19:13:09 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-13 19:13:09 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 224 ms
+2026-06-13 19:13:09 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2026-06-13 19:13:09 INFO  c.e.orderapp.OrderappApplication - Started OrderappApplication in 0.456 seconds (process running for 0.634)
+2026-06-13 19:13:12 INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2026-06-13 19:13:12 INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-13 19:13:12 INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-06-13 19:14:05 INFO  c.e.o.OrderappApplicationTests - Starting OrderappApplicationTests using Java 25.0.2 with PID 4545 (started by ashvini in /Volumes/SoftwareHive/WORK/STSWorkspace/order-app)
+2026-06-13 19:14:05 DEBUG c.e.o.OrderappApplicationTests - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-13 19:14:05 INFO  c.e.o.OrderappApplicationTests - No active profile set, falling back to 1 default profile: "local"
+2026-06-13 19:14:05 INFO  c.e.o.OrderappApplicationTests - Started OrderappApplicationTests in 0.408 seconds (process running for 0.733)
+2026-06-13 19:14:11 INFO  c.e.orderapp.OrderappApplication - Starting OrderappApplication using Java 25.0.2 with PID 4549 (/Volumes/SoftwareHive/WORK/STSWorkspace/order-app/target/classes started by ashvini in /Volumes/SoftwareHive/WORK/STSWorkspace/order-app)
+2026-06-13 19:14:11 DEBUG c.e.orderapp.OrderappApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-13 19:14:11 INFO  c.e.orderapp.OrderappApplication - No active profile set, falling back to 1 default profile: "local"
+2026-06-13 19:14:11 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-06-13 19:14:12 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-13 19:14:12 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-13 19:14:12 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 216 ms
+2026-06-13 19:14:12 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2026-06-13 19:14:12 INFO  c.e.orderapp.OrderappApplication - Started OrderappApplication in 0.439 seconds (process running for 0.602)
+2026-06-13 19:14:15 INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2026-06-13 19:14:15 INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-13 19:14:15 INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
