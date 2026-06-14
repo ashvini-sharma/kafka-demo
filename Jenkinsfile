@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        AWS_ACCOUNT_ID = '562437414962'
+        //AWS_ACCOUNT_ID = 
         AWS_REGION = 'ap-south-1'
         S3_BUCKET = 'jenkins-project-springboot-artifacts'
         ECR_REPO = 'learnjenkinsrepo'
