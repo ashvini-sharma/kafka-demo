@@ -48,32 +48,6 @@ pipeline {
             }
         }
 
-        /*
-        stage('Upload Image to ECR') {
-            steps {
-                script {
-                    env.IMAGE_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${ECR_REPO}:${BUILD_ID}"
-                    echo "IMAGE_URI=${env.IMAGE_URI}"
-                }
-        
-                withCredentials([
-                    usernamePassword(
-                        credentialsId: 'Jenkins-user',
-                        usernameVariable: 'AWS_ACCESS_KEY_ID',
-                        passwordVariable: 'AWS_SECRET_ACCESS_KEY'
-                    )
-                ]) {
-                    sh '''
-                        aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com
-
-                        docker tag $APP_NAME:$BUILD_ID $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$ECR_REPO:$BUILD_ID
-
-                        docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$ECR_REPO:$BUILD_ID
-                    '''
-                }
-            }
-        }*/        
-
         stage('Upload Image to ECR') {
             steps {
                  script {
@@ -106,7 +80,6 @@ pipeline {
             }
         }
 
-        /*
         stage('Deploy To EKS') {
             steps {
                 sh '''
@@ -158,7 +131,6 @@ pipeline {
                 sh 'aws s3 cp payment-app/target/ s3://${S3_BUCKET}/payment-app/ --recursive'
             }
         }
-        */
     }
 
     post {
