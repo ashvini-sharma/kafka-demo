@@ -136,14 +136,14 @@ pipeline {
                         kubectl exec kafka-0 -- kafka-topics.sh --create \
                         --topic order-topic \
                         --bootstrap-server kafka-0.kafka:9092 \
-                        --partitions 3 --replication-factor 1
+                        --partitions 3 --replication-factor 2
 
                         kubectl exec kafka-0 -- bash -c \
                         "kafka-topics.sh --bootstrap-server kafka-0.kafka:9092 --list | grep -w payment-topic" || \
                         kubectl exec kafka-0 -- kafka-topics.sh --create \
                         --topic payment-topic \
                         --bootstrap-server kafka-0.kafka:9092 \
-                        --partitions 3 --replication-factor 1
+                        --partitions 3 --replication-factor 2
                     '''
                 }
             }
