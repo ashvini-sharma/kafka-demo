@@ -5,6 +5,7 @@ metadata:
 spec:
   serviceName: kafka
   replicas: 3
+  podManagementPolicy: Parallel
   selector:
     matchLabels:
       app: kafka
